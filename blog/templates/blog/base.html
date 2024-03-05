@@ -1,0 +1,14 @@
+{% include "./html.html" %}
+    <title>{% block title %}Meu Site{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>{% block header %}Cabeçalho Padrão{% endblock %}</h1>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+        {% block footer %}{% endblock  %}
+    </main>
+</body>
+</html>

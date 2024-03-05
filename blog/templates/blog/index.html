@@ -1,13 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    OI
-    {{nome}}
+{% extends './base.html' %}
 
-</body>
-</html>
+{% block title %}Página Específica{% endblock %}
+
+{% block header %}Bem-vindo à Página Específica{% endblock %}
+
+{% block content %}
+    <h2>Conteúdo da Página Específica</h2>
+    <p>Este é o conteúdo exclusivo da página.</p>
+    {% if nome == "JOAO" %}
+    <p>O nome esta certo</p>
+    {% endif %}  
+{% endblock %}
+
+{% block  footer%}{{nome}}{% endblock  %}
+
+
+
