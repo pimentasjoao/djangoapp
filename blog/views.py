@@ -5,4 +5,7 @@ from django.shortcuts import render
 
 
 def blog(request):
-    return HttpResponse('Olá')
+    return HttpResponse('Olá Blog')
+
+def exemplo(request):
+    return render(request,'blog/index.html',{'nome':'JOAO'})
