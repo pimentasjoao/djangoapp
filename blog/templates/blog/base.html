@@ -5,10 +5,24 @@
     <header>
         <h1>{% block header %}Cabeçalho Padrão{% endblock %}</h1>
     </header>
-
     <main>
         {% block content %}{% endblock %}
         {% block footer %}{% endblock  %}
     </main>
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url "home" %}">HOME</a>
+            </li>
+            <li>
+                <a href="{% url "create" %}">BLOG</a>
+            </li>
+            <li>
+                <a href="http://">EXIT</a>
+            </li>
+        </ul>
+    </nav>
+    {% lorem 1 b random %}
+    
 </body>
 </html>
