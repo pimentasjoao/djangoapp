@@ -11,3 +11,8 @@ def home(request):
 
 def create(request):
     return render(request,'blog/blog.html',context)
+
+def select(request,id):
+    context={'id' : id,
+             'posts': post}
+    return render(request,'blog/blogselect.html',context)

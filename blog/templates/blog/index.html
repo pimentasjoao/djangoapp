@@ -9,6 +9,7 @@
     <p>Este é o conteúdo exclusivo da página.</p>
     {% for post in posts %}
        <p>{{post}}</p>
+       <p><a href={% url "select" post.id %}>{{post.id}}</a></p>
     {% endfor %}
     
 {% endblock %}
