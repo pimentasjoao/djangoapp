@@ -55,7 +55,9 @@ ROOT_URLCONF = 'djangoapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR /'blog'/'global',
+        ],   #utilizado quando se quer criar pastas de templates globais
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
