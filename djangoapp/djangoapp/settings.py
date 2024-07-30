@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog',   #colocar o app apos a criaçao do mesmo
 ]
 
 MIDDLEWARE = [
