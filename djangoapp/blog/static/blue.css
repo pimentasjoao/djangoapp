@@ -1,0 +1,9 @@
+
+body{
+    background-color: #f1f1f1;  /*css para testes com arquivos estaticos.*/
+}
+
+.post{
+    border: 1px solid black;
+    margin-top:10px;
+}

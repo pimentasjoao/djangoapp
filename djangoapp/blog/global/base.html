@@ -1,12 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{titulo}}</title>
+    <link rel="stylesheet" href="{% static "blue.css" %}">
+    
 </head>
 <body>
    {% include "lista.html" %}
+   {% include "menu.html" %}
    {% block texto %}BASE{% endblock texto %}
+<main class="posts">
+    {% block posts %}  {% endblock posts %}
+</main>
+   
+       
 </body>
 </html>
