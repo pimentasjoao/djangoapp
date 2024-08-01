@@ -7,6 +7,6 @@ urlpatterns = [
    # path('', views.myblog),
     path('', views.myblog2,name='blog'),
     path('exemplo/', views.exemplo, name="exemplo"), #os nomes para as urls so serao usados para linkagem interna no site 
-    path('exemplo/<id>', views.exemplo, name="exemplo"),
+    path('exemplo/<id>', views.exemploid, name="exemplo"),
    
 ]
