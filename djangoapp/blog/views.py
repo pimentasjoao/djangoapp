@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from blog.dados import posts
 
 # Create your views here.
@@ -22,15 +22,16 @@ def exemplo(request):
         {'texto': 'Ola Exemplo', 'titulo':'Exemplo', 'posts': context}
     )
 
-def exemploid(request, id):
-    res=posts
-    context=None
-    for post in res:
-        if post['id'] == id:
-            context=post
-
+def exemploid(request, postid):
+    found_post = None
+    for post in posts:
+        if post['id'] == postid:
+            found_post=post
+            break
+    if found_post==None:
+        raise Http404("Item nao existe")
     return render(
         request,
         'index2.html',
-        {'texto': 'Ola Exemplo', 'titulo':'Exemplo', 'posts': context}
+        {'texto': 'Ola Exemplo', 'titulo':'Exemplo', 'posts': found_post}
     )

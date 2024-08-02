@@ -3,7 +3,8 @@
     <header>
         <h2 class="post_title">
         <p>ID:{{post.id}}</p> 
-                {{post.title}}
+               <a href="{% url "exemploid" post.id%}">{{post.title}}</a>
+                
         </h2>
     </header>
     <div class="post__body">

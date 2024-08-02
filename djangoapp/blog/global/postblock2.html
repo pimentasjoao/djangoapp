@@ -1,0 +1,18 @@
+
+<article class="post">
+    <header>
+        <h2 class="post_title">
+            <a href="{% url "exemplo" %}">VOLTAR</a>
+        <p>ID:{{posts.id}}</p>
+              {% if posts.id %}
+               <a href="{% url 'exemploid' posts.id %}">{{posts.title}}</a>
+               {% else %}
+                 <p>Post ID não disponível.</p>
+                {% endif %}
+         
+        </h2>
+    </header>
+    <div class="post__body">
+                 {{posts.body}}
+    </div>
+</article>
